@@ -4,7 +4,7 @@
 void ltoao(long nums, char* s) {
 	unsigned long num = nums;
 	char symb[] = "01234567";
-	int len = 0, rem, i = 0, k = 0, j = 0, fl = 0;
+	int len = 0, rem, i = 0, k = 0, j = 0;
 	
 	len = strlen(s);
 
@@ -12,12 +12,6 @@ void ltoao(long nums, char* s) {
 		s[e] = ' ';
 	}
 
-	//long long num_l = num;
-	/*
-	if (num_l < 0) {
-		num_l = 0xffffffffffffffff + num_l;
-	} 
-	*/
 	while (num != 0) {
 		rem = num % 8;
 		num = num / 8;
@@ -27,13 +21,7 @@ void ltoao(long nums, char* s) {
 
 	for (j = 0; s[j] != '\0'; j++) {
 		if (s[j] != ' ') {
-			/*
-			if (fl == 1) {
-				s[k] = '-';
-				fl = 0;
-				k++;
-			} */
-
+			
 			s[k] = s[j];
 			k++;
 		}
